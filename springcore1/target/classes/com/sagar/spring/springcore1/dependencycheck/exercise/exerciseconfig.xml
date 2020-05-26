@@ -9,7 +9,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<bean name="university"
-		class="com.sagar.spring.springcore1.dependencycheck.exercise.University" p:id="11003" />
+		class="com.sagar.spring.springcore1.dependencycheck.exercise.University" p:id="11003" scope="prototype" />
 
 	<context:annotation-config/>
 </beans>
