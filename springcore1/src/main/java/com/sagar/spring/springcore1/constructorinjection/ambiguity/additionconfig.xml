@@ -8,31 +8,16 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<bean name="address"
-		class="com.sagar.spring.springcore1.constructorinjection.Address"
-		p:hno="123" p:street="northgate" p:city="irving" />
-
-	<bean name="employee"
-		
-		class="com.sagar.spring.springcore1.constructorinjection.Employee"
-		c:id="123" c:address-ref="address">	
-	<!-- 	using c-schema -->
-			
-			
-			
-		<!-- <constructor-arg value="123"/> 
-		<constructor-arg ref="address"/> -->
-		
-		
-		<!-- <constructor-arg value="123">
-			<value>123</value>
-		</constructor-arg>
-		<constructor-arg>
-			<ref bean="address" />
-		</constructor-arg> -->
-
-	</bean>
+	
+	<bean name="addition" class="com.sagar.spring.springcore1.constructorinjection.ambiguity.Addition">
+	
+	<constructor-arg value="20.3" type="double" index="1"/>
+	<constructor-arg value="10" type="int" index="0"/>
+	
+	</bean> 
+	
+	
+	
 
 
 	<context:annotation-config />
